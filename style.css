@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+#open {
+  position: absolute;
+  background: red;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+#all {
+  position: absolute;
+  background: blue;
+  margin-left: 1rem;
+  margin-top: 4rem;
+  padding: 10px;
+}
