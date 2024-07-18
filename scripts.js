@@ -13,7 +13,6 @@ const cursor = {
 window.addEventListener("mousemove", (event) => {
   cursor.x = event.clientX / sizes.width - 0.5;
   cursor.y = -(event.clientY / sizes.height - 0.5);
-  console.log(cursor.x, cursor.y);
 });
 
 // scene
@@ -24,6 +23,21 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
+
+// add geometry
+const geometry = new THREE.SphereGeometry(500, 60, 40);
+// invert the geometry on the x-axis so that all of the faces point inward
+geometry.scale(-1, 1, 1);
+
+const texture = new THREE.TextureLoader().load(
+  "textures/spruit_sunrise_4k_hdr.jpg"
+);
+texture.colorSpace = THREE.SRGBColorSpace;
+const material = new THREE.MeshBasicMaterial({ map: texture });
+
+const mesh = new THREE.Mesh(geometry, material);
+
+scene.add(mesh);
 
 // event listener resize
 window.addEventListener("resize", () => {

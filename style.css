@@ -15,7 +15,7 @@ body {
   overflow: hidden;
 }
 
-#open {
+#pan-1 {
   position: absolute;
   background: red;
   margin-left: 1rem;
@@ -23,7 +23,7 @@ body {
   padding: 10px;
 }
 
-#all {
+#pan-2 {
   position: absolute;
   background: blue;
   margin-left: 1rem;
